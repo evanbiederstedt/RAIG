@@ -3,9 +3,6 @@
 import sys, os, glob
 import json, operator, itertools, re, math, time
 
-sys.path.append("../lib/") # point the library path for networkx and statsmodels
-sys.path.append("/home/bournewu/pylib/lib/python2.7/site-packages/")
-sys.path.append("/home/bournewu/pylib/lib/python2.7/site-packages/")
 import networkx as nx
 import statsmodels.stats.multitest as smm
 

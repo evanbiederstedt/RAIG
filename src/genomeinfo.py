@@ -253,7 +253,7 @@ class GenomeInfo():
             line = line.strip("\n")
             v = line.split("\t")
             if v[1] == 'X' or v[1] == 'x':
-				v[1] = str(23)
+                v[1] = str(23)
             elif v[1] == 'Y' or v[1] == 'y':
                 v[1] = str(24)
     
