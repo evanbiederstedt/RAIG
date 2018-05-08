@@ -72,7 +72,7 @@ def copyNumberProcessing(args):
     for chrm in args.run_chrom:
         sys.stderr.write( "Chromosome " + str(chrm) + "\n")
         cna.run(chrm)  
-    print time.time() - start_time          
+    print(time.time() - start_time)         
     
     del cna
 
