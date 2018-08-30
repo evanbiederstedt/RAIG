@@ -48,9 +48,9 @@ class CliqueInterval():
 			self.avgFreq[cid] = [self.region[cid][0], self.region[cid][0], len(self.idata[cid])]
 
 	def orderClique(self):
-		for k in sorted(filter(lambda x:self.cnatype[x]=='A', self.region.keys()), key=lambda x:self.region[x][0]):
+		for k in sorted([x for x in list(self.region.keys()) if self.cnatype[x]=='A'], key=lambda x:self.region[x][0]):
 			self.cidOrderListA.append(k)
-		for k in sorted(filter(lambda x:self.cnatype[x]=='D', self.region.keys()), key=lambda x:self.region[x][0]):
+		for k in sorted([x for x in list(self.region.keys()) if self.cnatype[x]=='D'], key=lambda x:self.region[x][0]):
 			self.cidOrderListD.append(k)		
 
 

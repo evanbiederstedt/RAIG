@@ -131,7 +131,7 @@ class raig_pipeline():
 					G.add_edge(eid1, eid2)
 				open_things.update(new_eids)
 		else:						
-			for eid1, eid2 in itertools.combinations(edgesetD.keys(), 2):
+			for eid1, eid2 in itertools.combinations(list(edgesetD.keys()), 2):
 				if not (edgesetD[eid1][0] > edgesetD[eid2][1] or edgesetD[eid1][1] < edgesetD[eid2][0]) :
 					G.add_edge(eid1, eid2)								
 				else:					
@@ -168,7 +168,7 @@ class raig_pipeline():
 		return cscPairA, cscPairD
 
 	def significance_assessment(self, cscPairA, cscPairD, leftregion, rightregion, meta_chrome, arm, AmpPat, DelPat, chrm_genebkt):
-		if len(cscPairA.keys()) != 0 or len(cscPairD.keys()) != 0:
+		if len(list(cscPairA.keys())) != 0 or len(list(cscPairD.keys())) != 0:
 			scorelistA, scorelistD = [], []
 			for i in range(0, self.num_permutation):				
 				permute_regionA, permute_regionD = cna_utils.cycle_shift_permutation(self.dlcall.regionA[meta_chrome][arm], self.dlcall.regionD[meta_chrome][arm], leftregion, rightregion)				

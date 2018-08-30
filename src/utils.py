@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
  
 
 def formatEdgeId(showppp, outregionA, outregionD):#abbA, abbD):
